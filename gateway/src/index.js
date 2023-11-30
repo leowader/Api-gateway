@@ -26,6 +26,3 @@ app.use(
 app.listen(PORT, () => {
   console.log(`Server api-gateway runningin port ${PORT}`);
 });
-app.get("/", (req, res) => {
-  res.send({ message: "bienvenido a api-gateway" });
-});
