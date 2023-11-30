@@ -9,7 +9,7 @@ async function main() {
     });
     console.log("Conection has been established successfully in Postgres");
   } catch (error) {
-    console.log("Error in connection in db Postgres",erro);
+    console.log("Error in connection in db Postgres",error);
   }
 }
 app.get("/", (req, res) => {

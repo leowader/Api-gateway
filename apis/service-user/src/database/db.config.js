@@ -1,9 +1,11 @@
 const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+dotenv.config();
 mongoose
-  .connect("mongodb://127.0.0.1:27017/service-one")
+  .connect(process.env.MONGO_URL)
   .then(() => {
     console.log("MongoDB connected successfully");
   })
   .catch((err) => {
-    console.error("Error in connection: "+err);
+    console.error("Error in connection: " + err);
   });
