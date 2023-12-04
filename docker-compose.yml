@@ -4,6 +4,7 @@ services:
     image: postgres
     restart: always
     container_name: postgresdb
+    hostname: host-postgres
     ports:
       - "5432:5432"
     environment:
@@ -15,6 +16,7 @@ services:
     image: mongo
     restart: always
     container_name: mongodb
+    hostname: host-mongo
     environment:
       MONGO_INITDB_ROOT_USERNAME: wader
       MONGO_INITDB_ROOT_PASSWORD: 251510
