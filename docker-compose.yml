@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres
+    restart: always
+    container_name: postgresdb
+    ports:
+      - "5432:5432"
+    environment:
+      - DATABASE_HOST=121.0.0.1
+      - POSTGRES_USER=leowader
+      - POSTGRES_PASSWORD=251510
+      - POSTGRES_DB=api_gateway
+  mongo:
+    image: mongo
+    restart: always
+    container_name: mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: wader
+      MONGO_INITDB_ROOT_PASSWORD: 251510
+    volumes:
+      - ./apis/service-user/data:/data/db
+    ports:
+      - "27017:27017"
